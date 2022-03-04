@@ -2,7 +2,6 @@ import {
   Controller,
   Param,
   Body,
-  Query,
   Get,
   Post,
   Patch,
@@ -23,11 +22,6 @@ export class MoviesController {
   getAll(): Movie[] {
     return this.moviesService.getAll();
   }
-
-  /*@Get("search")
-  search(@Query("year") year: string) {
-    return `I search movie realised after ${year} year`;
-  }*/
 
   @Get("/:id")
   getOne(@Param("id") movieId: number): Movie {
